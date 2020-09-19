@@ -63,4 +63,10 @@ as.numeric(as.factor(pull(prob1_df, rand_samp_pos))) * pull(prob1_df, rand_samp_
 
 ```
 
+# PROBLEM 2 
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
 
