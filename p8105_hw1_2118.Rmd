@@ -23,7 +23,7 @@ prob1_df = tibble(
 prob1_df
 ```
 
-The code chunk attempts to find the mean of each variable. For purposes of clarity, results are hidden.
+The code chunk attempts to find the mean of each variable. For purposes of clarity, results are hidden but are described below. 
 
 ```{r Variable_Means, results='hide', message=FALSE, warning=FALSE}
 mean_rand_samp = mean(pull(prob1_df, rand_samp))
@@ -39,4 +39,14 @@ mean_vec_factor
 #The numeric variables create means but the non-numeric variables return NA.
 ```
 
-This chunk of code 
+This chunk of code converts variable type. Character --> numeric. 
+
+```{r Variable_type_convert, eval=FALSE}
+as.numeric(rand_samp_pos)
+as.numeric(vec_char)
+as.numeric(vec_factor)
+
+#What happens and why? 
+#The code returns as an error message saying 'error in eval' because the 'argument is not numeric or logical'. Execution is halted. THis is because the variables are non-numeric. 
+```
+
