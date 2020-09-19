@@ -71,7 +71,7 @@ data("penguins", package = "palmerpenguins")
 
 ## The _penguins_ dataset is comprised of: 
 
-- The size measurements of adult foraging penguins near Palmer Station, Antarctica. These include: 
+- The size measurements of adult foraging penguins near Palmer Station, Antarctica. Variables include: 
   - Species _(Adelie, Chinstrap, and Gentoo)_
   - Island _(Biscoe, Dream, or Torgersen)_
   - bill_length_mm 
@@ -83,7 +83,7 @@ data("penguins", package = "palmerpenguins")
   
 - The dataset has **`r nrow(penguins)`** rows and **`r ncol(penguins)`** columns.
 
-- The mean flipper length of the penguins near Palmer Station, Antarctica is `r mean(penguins$flipper_length_mm)` millimeters. 
+- The mean flipper length of the penguins near Palmer Station, Antarctica is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` millimeters. 
 
 The next code chunk will provide a scatterplot of bill length by flipper length (mm), with species differentiated by color. 
 
