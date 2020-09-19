@@ -50,12 +50,17 @@ as.numeric(pull(prob1_df, vec_factor))
 #Values turn into 1, 0 for rand_samp_pos -- values turn into 1, 2, 3 for vec_factor -- values for vec_char result in NA. Vec_char is non-numeric and has no numeric conversion. This is just like the means example above. 
 ```
 
-This code chunk converts the logical vector to numeric... 
+This code chunk converts the logical vector to numeric or factor and explores multiplying by the result.
 
 ```{r vector_conversion_part_2}
 as.numeric(pull(prob1_df, rand_samp_pos)) * pull(prob1_df, rand_samp_pos)
-as.factor(pull(prob1_df, rand_samp_pos)) * pull(prob1_df, rand_samp_pos)
+
+as.factor(pull(prob1_df, rand_samp_pos)) * (pull(prob1_df, rand_samp_pos))
+
+# Note: * is not meaningful for factors. 
+
 as.numeric(as.factor(pull(prob1_df, rand_samp_pos))) * pull(prob1_df, rand_samp_pos)
+
 ```
 
 
