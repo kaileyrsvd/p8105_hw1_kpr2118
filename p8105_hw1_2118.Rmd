@@ -1,0 +1,6 @@
+---
+title: "p8105_hw1_kpr2118.Rmd"
+author: "Kailey Rishovd"
+date: "9/19/2020"
+output: github_document
+---
