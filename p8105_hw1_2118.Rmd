@@ -54,6 +54,8 @@ This code chunk converts the logical vector to numeric...
 
 ```{r vector_conversion_part_2}
 as.numeric(pull(prob1_df, rand_samp_pos)) * pull(prob1_df, rand_samp_pos)
+as.factor(pull(prob1_df, rand_samp_pos)) * pull(prob1_df, rand_samp_pos)
+as.numeric(as.factor(pull(prob1_df, rand_samp_pos))) * pull(prob1_df, rand_samp_pos)
 ```
 
 
