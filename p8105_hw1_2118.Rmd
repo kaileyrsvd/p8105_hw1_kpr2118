@@ -6,11 +6,11 @@ output: github_document
 ---
 # PROBLEM 1 
 
-The chunk below creates a dataframe containing a random sample of size 10 from a std normal distribution, a logical vector indicating if elements are GT 0, a character vector length 10, and a factor vector length 10 with 3 factor levels. The code chunk also attempts to find the mean of each variable.
+The chunk below creates a dataframe containing a random sample of size 10 from a std normal distribution, a logical vector indicating if elements are GT 0, a character vector length 10, and a factor vector length 10 with 3 factor levels. 
 
 note: running the tidyverse library in order to use the tibble fxn. 
 
-```{r problem 1}
+```{r problem_1}
 library(tidyverse)
 
 prob1_df = tibble(
@@ -21,9 +21,11 @@ prob1_df = tibble(
 )
 
 prob1_df
+```
 
-#MEANS:
+The code chunk attempts to find the mean of each variable. For purposes of clarity, results are hidden.
 
+```{r Variable_Means, results='hide', message=FALSE, warning=FALSE}
 mean_rand_samp = mean(pull(prob1_df, rand_samp))
 mean_rand_samp
 mean_rand_samp_pos = mean(pull(prob1_df, rand_samp_pos))
@@ -36,3 +38,5 @@ mean_vec_factor
 #What works and what doesn't?
 #The numeric variables create means but the non-numeric variables return NA.
 ```
+
+This chunk of code 
